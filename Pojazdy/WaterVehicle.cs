@@ -10,8 +10,10 @@ namespace Pojazdy
         public override string ToString()
         {
             StringBuilder s = null;
+
             s.Append(base.ToString());
             s.AppendLine($"Displacement: {Displacement} tons");
+
             return s.ToString();
         }
         public WaterVehicle(string name, double displacement, Environment environment = Environment.Water, Engine engine = null) : base(name, environment, engine)
@@ -20,8 +22,7 @@ namespace Pojazdy
             if (engine!=null)
             {
                 this.Engine.Type = Engine.EngineType.Diesel;
-            }
-            
+            }            
         }
     }
 }

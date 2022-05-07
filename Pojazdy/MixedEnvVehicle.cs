@@ -7,7 +7,6 @@ namespace Pojazdy
     public class MixedEnvVehicle:BaseVehicle
     {
         private Environment currentEnvironment;
-
         public double MaxAltVelocity { get; }
         public double MinAltVelocity { get; }
         public int NumberOfWheels { get; }
@@ -29,8 +28,10 @@ namespace Pojazdy
         public override string ToString()
         {
             StringBuilder s = null;
+
             s.Append(base.ToString());
             s.AppendLine($"Alternative environment");
+
             if (NumberOfWheels != 0)
                 s.AppendLine($"Number of wheels: {NumberOfWheels}");
             if (Displacement != 0)
@@ -52,14 +53,17 @@ namespace Pojazdy
                     MinAltVelocity = 20;
                     MaxAltVelocity = 200;
                     break;
+
                 case Environment.Water:
                     MinAltVelocity = 1;
                     MaxAltVelocity = 40;
                     break;
+
                 case Environment.Ground:
                     MinAltVelocity = 1;
                     MaxAltVelocity = 350;
                     break;
+
                 default:
                     break;
             }

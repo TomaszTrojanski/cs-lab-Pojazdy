@@ -9,11 +9,11 @@ namespace Pojazdy
         public override string ToString()
         {
             StringBuilder s = null;
+
             s.Append(base.ToString());
+
             return s.ToString();
         }
-        public AirVehicle(string name, Environment environment, Engine engine = null) : base(name, environment, engine)
-        {
-        }
+        public AirVehicle(string name, Environment environment, Engine engine = null) : base(name, environment, engine){}
     }
 }

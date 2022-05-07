@@ -10,7 +10,6 @@ namespace Pojazdy
         public void StartStop();
         public double VelocityUniversalValue();
         public void ChangeVelocity(double acceleration);
-
         public static double CalculateSpeed(double currentVelocity, Environment baseEnv, Environment targetEnv)
         {
             switch (baseEnv)
@@ -62,7 +61,6 @@ namespace Pojazdy
             }
         }
     }
-
     public enum Environment
     { 
         Air,
